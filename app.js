@@ -2,13 +2,16 @@ const express = require('express');
 const app = express();
 const loginController = require('./controllers/loginController');
 
-app.set('view engine','html');
-app.engine('html',require('ejs').renderFile);
+// Middleware untuk mengatur parsing body pada request
+app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static('public'));
+// Rute untuk menampilkan halaman login
+app.get('/login', loginController.showLoginForm);
 
-app.get('/',loginController.index);
+// Rute untuk memproses login
+app.post('/login', loginController.processLogin);
 
-app.listen(3000,()=>{
-    console.log('aplikasi berjalan pada port 3000')
-})
+// Jalankan server pada port 3000
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
