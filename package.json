@@ -1,0 +1,24 @@
+{
+  "name": "tubes",
+  "version": "1.0.0",
+  "description": "Repositori untuk mencoba remote",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azizahfd/TUBES.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azizahfd/TUBES/issues"
+  },
+  "homepage": "https://github.com/azizahfd/TUBES#readme",
+  "dependencies": {
+    "aedes": "^0.49.0",
+    "express": "^4.18.2"
+  }
+}
