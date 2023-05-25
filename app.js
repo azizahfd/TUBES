@@ -1,14 +1,31 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
 const app = express();
-const loginController = require('./controllers/loginController');
+const userController = require('./controllers/userController');
 
-app.set('view engine','html');
-app.engine('html',require('ejs').renderFile);
+// setup view engine
+app.set('views',path.join(__dirname,'views'));
+app.set('view engine','ejs')
 
-app.use(express.static('public'));
+// Setup static files
+app.use(express.static(path.join(__dirname, 'public')));
+// Setup body parser
+app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get('/',loginController.index);
+// Routes
+app.get('/login', userController.index);
+app.post('/login',userController.submit);
 
-app.listen(3000,()=>{
-    console.log('aplikasi berjalan pada port 3000')
-})
+//app.post('/', userController.create);
+// Error handling
+app.use((req, res, next) => {
+res.status(404).render('error', { message: 'Page not found' });
+});
+app.use((err, req, res, next) => {
+res.status(500).render('error', { message: err.message });
+});
+// Start server
+app.listen(3000, () => {
+console.log('Server is running on http://localhost:3000');
+});
