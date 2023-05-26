@@ -4,9 +4,12 @@ const DB_PATH = './database/data.db';
 class User {
     static get(nama, NIM, callback) {
       const db = new sqlite3.Database(DB_PATH);
-      db.get('SELECT * FROM login WHERE nama = ? AND NIM = ?', [nama, NIM], (err, row) => {
+      db.get('SELECT * FROM login' , [], (err, row) => {
         callback(err, row);
       });
+      // db.get('SELECT * FROM login WHERE nama = ? AND NIM = ?', [nama, NIM], (err, row) => {
+      //   callback(err, row);
+      // });
       db.close();
     }
   }

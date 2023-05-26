@@ -42,6 +42,15 @@ body{
 .img img{
 	width: 500px;
 }
+.avatar{
+	widht: 100px;
+}
+form h2{
+	font-size: 2.9rem;
+	text-transform: uppercase;
+	margin: 15px 0;
+	color: #333;
+}
 
 form{
 	width: 360px;

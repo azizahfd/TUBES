@@ -10,6 +10,7 @@ app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs')
 
 // Setup static files
+
 app.use(express.static(path.join(__dirname, 'public')));
 // Setup body parser
 app.use(bodyParser.urlencoded({ extended: false }));

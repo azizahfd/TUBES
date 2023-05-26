@@ -6,26 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap">
+    <link rel="stylesheet" href="/style.css" type="text/css">
     <script src="viewport" ></script>
 </head>
 <body>
     <div class="container">
         <div class="img">
-            <img src="public/bebas.png">
+            <img src="/bebas.svg">
         </div>
         <div class="login-content">
-            <form action="/login" method="post">
-                <img src="public/avatar.svg">
+            <form action="login" method="POST">
+				<img src="/avatar.svg">
+				<h2 class="title">Login</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           		   		<input type="text" class="input">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>NIM</h5>
+           		    	<input type="NIM" class="input">
+            	   </div>
+            	</div>
+            	<a href="#">Forgot Password?</a>
+            	<input type="submit" class="btn" value="Login">
+            </form>
+            <!-- <form action="./login" method="post">
+                <img src="/avatar.png">
                 <h2 class="title">LOGIN</h2>
                 <input type="text" name = "nama" placeholder="nama" required>
                 <input type="text" name = "NIM" placeholder="NIM" required>
                 <button type="submit">Submit</button>
-            </form>
+            </form> -->
         </div>
        
-
     </div>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="/main.js"></script>
     
 
 </body>
