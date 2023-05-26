@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Repositori untuk mencoba remote",
   "main": "app.js",
+
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -15,6 +17,7 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/azizahfd/TUBES/issues"
+    
   },
   "homepage": "https://github.com/azizahfd/TUBES#readme",
   "dependencies": {
@@ -24,5 +27,8 @@
     "express": "^4.18.2",
     "path": "^0.12.7",
     "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }

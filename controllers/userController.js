@@ -1,23 +1,24 @@
-const user = require("..//models/user") ;
+const User = require("..//models/user") ;
 
 const userController = {};
 
-userController.index = (_req,res)=>{
-    auser.all((err,rows)=>{
-        if(err){
-            res.render("eror",{message:err.message})
-        } else {
-            res.render("login",{users:rows});
-        }
-        });
-    };
-userController.submit=(_req,res)=>{
-    user.all((_err,_rows)=>{
-        if(user){
-            res.redirect('/dashboard')
-        } else {
-            res.render('login',{error:'nama dan NIM tidak benar'})
-        }
-        });
-    };
+userController.index=(req,res) => {
+  res.render('login');
+};
+
+userController.submit=(req,res)=>{
+  const { nama, NIM } = req.body;
+  
+  // Periksa apakah username dan password sesuai dengan yang ada di database
+  User.get(nama,NIM, (err,user) => {
+    if (err) {
+      res.status(500).render('error', { message: err.message });
+    } else if (user) {
+      res.redirect('/dashboard');
+    } else {
+      res.render('login', { error: 'Nama dan NIM tidak benar' });
+    }
+  });
+};
+
 module.exports = userController;
