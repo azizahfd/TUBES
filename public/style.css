@@ -43,7 +43,7 @@ body{
 	width: 500px;
 }
 .avatar{
-	widht: 100px;
+	width: 100px;
 }
 form h2{
 	font-size: 2.9rem;
@@ -78,6 +78,48 @@ form{
 
 .login-content .input-div.one{
 	margin-top: 0;
+}
+
+.login-content .input-div.one .div label{
+	position : absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size:16px;
+    color:#03a9f4;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-content .input-div.pass .div label{
+	position : absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size:16px;
+    color:#03a9f4;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-content .input-div.one .div input:focus ~ label,
+.login-content .input-div.one .div input:valid ~ label
+.login-content .input-div.pass .div input:focus ~ label
+{
+	top: -20px;
+	left:0;
+	color:#03a9f4;
+	font-size: 12px;
+}
+
+.login-content .input-div.pass .div input:focus ~ label,
+.login-content .input-div.pass .div input:valid ~ label
+.login-content .input-div.one .div input:focus ~ label
+{
+	top: -20px;
+	left:0;
+	color:#03a9f4;
+	font-size: 12px;
 }
 
 .i{
