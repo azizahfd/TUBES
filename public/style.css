@@ -42,6 +42,7 @@ body{
 .img img{
 	width: 500px;
 }
+
 .avatar{
 	width: 100px;
 }
@@ -51,6 +52,7 @@ form h2{
 	margin: 15px 0;
 	color: #333;
 }
+
 
 form{
 	width: 360px;
