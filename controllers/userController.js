@@ -11,12 +11,13 @@ userController.submit=(req,res)=>{
   
   // Periksa apakah username dan password sesuai dengan yang ada di database
   User.get(nama,NIM, (err,user) => {
-    if (err) {
-      res.status(500).render('error', { message: err.message });
-    } else if (user) {
+    // if (err) {
+    //   res.status(500).render('error', { message: err.message });
+    // } 
+    if (user) {
       res.redirect('/dashboard');
     } else {
-      res.render('login', { error: 'Nama dan NIM tidak benar' });
+      res.render('login', { MessageEvent: 'Nama dan NIM tidak benar' });
     }
   });
 };

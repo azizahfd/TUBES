@@ -1,4 +1,4 @@
-const user = require("..//models/dashboard") ;
+const user = require("../models/dashboard") ;
 
 const dashboardController = {};
 

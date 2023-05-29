@@ -4,6 +4,7 @@ const path = require('path');
 const app = express();
 const userController = require('./controllers/userController');
 const dashboardController = require('./controllers/dashboardController')
+const adminController = require('./controllers/adminController');
 
 // setup view engine
 app.set('views',path.join(__dirname,'views'));
@@ -19,6 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.get('/', userController.index);
 app.post('/login', userController.submit);
 app.get('/dashboard', dashboardController.showDashboard);
+app.get('/admin', adminController.submit);
 
 // Error handling
 app.use((req, res, next) => {
@@ -31,5 +33,3 @@ res.status(500).render('error', { message: err.message });
 app.listen(3000, () => {
 console.log('Server is running on http://localhost:3000');
 });
-
-
