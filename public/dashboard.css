@@ -102,6 +102,10 @@
 .btn:hover{
 	background-position: right;
 }
+
+h4{
+    text-align: center;
+}
 :root{
     /* ===== Colors ===== */
     --body-color: #E4E9F7;

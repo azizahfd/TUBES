@@ -7,11 +7,12 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    
 </head>
 <script type="text/javascript" src="/js/main.js"></script>
 <link rel="stylesheet" href="/dashboard.css" type="text/css">
 <body>
-    <h1 class="judul">PRATIKUM RESONANSI</h1>
+    <h1 class="judul">PRAKTIKUM RESONANSI</h1>
     <div class="container2">
         
         <div class="bottom-content">
@@ -35,12 +36,18 @@
     
         </div>
         <div class="hasil">
-            <div class="tombol"> <input type="submit" value="lenght" ></div>
+            <h4>Length</h4>
+            <div class="tombol"></div>
+            <h4>dB</h4>
+            <div class="tombol"></div>
         </div>
             <div class="video">  
-                <h1>Data dB</h1>
-                <div height="'405px" width="700px">
+                <h3>Data dB</h3>
+                <!-- <div height="'405px" width="700px">
                     <canvas id="myChart"></canvas>
+                </div> -->
+                <div>
+                    <img src="/download.png" height="'405px" width="700px">
                 </div>
                 <!-- <div id ="videolive" >
                     <iframe width="700" height="405" src="https://www.youtube.com/embed/live_stream?channel=UCqnEe60wlPu1d3yEbCUBY3Q" frameborder="0" allowfullscreen></iframe>
@@ -50,8 +57,8 @@
         </div>
 
         
-        <div class="menu-bar">
-            <!-- <div class="menu">
+        <!-- <div class="menu-bar">
+            <<div class="menu">
                 <li class="search-box"></li>
                 <i class="bx bx-search icon"></i>
                 <input type="text" placeholder="search">
@@ -89,6 +96,23 @@
             
     <!-- </section>
 </div> -->
-
+<script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const chart = new Chart(ctx, {
+ type: 'line',
+ data: {
+ labels: [1,2,3,4,5,6,7,8,9],
+ datasets: [ 
+ {
+ label: 'Data',
+ data: [40,70,74,56,75,95,75,86,58],
+ fill: false,
+ borderColor: 'rgb(75, 192, 192)',
+ tension: 0.1,
+ }
+ ] 
+ }
+ });
+</script>
 </body>
 </html>
